@@ -1,391 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-  </head>
 
-  <style>
-  body {
-      background-color: #f8f9f9;
-      font-family: "Trebuchet MS", Helvetica, sans-serif;
-      max-width: 100%;
-      color: #2A4765;
-      font-size: large;
-  }
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>DAISY: Data Management and Intelligent Systems</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  html, body {
-    padding: 0;
-    margin: 0;
-  }
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   
-  h1, .intro, #banner {
-      text-align: center;
-      text-decoration: none !important;
-  }
-
-  td a {
-    text-decoration: none !important;
-    font-weight: normal !important;
-  }
-
-  a {
-    color: #2A4765;
-    font-weight: bold;
-    text-decoration: underline;
-  }
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
   
-  .header-table {
-      border: none;
-      border-collapse: collapse;
-      width: 100%;
-      font-size: larger;
-      
-  }
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="./img/daisy-logo.png">
 
-  .footer {
-      text-align: center;
-      color: darkgray;
-  }
+</head>
+<body>
 
-  .a {
-    text-decoration: underline important!;
-  }
   
-  td {
-      border: none !important;
-  }
-  
-  .side-row {
-      width: 20%;
-  }
-  
-  .main-row {
-      width: 60%;
-  }
-  
-  .avatar {
-      border-radius: 50%;
-  }
 
-  #top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 23px;
-    padding: 10px 10px 10px 10px;
-    background-color: #f8f9f9;
-  }
 
-  #banner {
-      background: url(./img/header.jpg) no-repeat;
-      width: 100%;
-      height: 45%;
-      background-size: 100%;
-      font-size: 10em;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      
-  }
+  <div class="container">
+    <div class="row"  style="margin-top: 10%">
+      <div class="three columns">
+        <img class="dllogo" src="./img/daisy-logo.png" width="110%">
+      </div>
+      <div class="nine columns" >
+        <!-- <h1 class="remove-bottom">DAISY</h1> -->
+        <h4>Data Management and Intelligent Systems (DAISY)</h4>
+        <h5>Competence Cluster at the <a href="https://www.umu.se/en/department-of-computing-science/">CS Department</a> of <a href="https://www.umu.se">Umeå University</a></h5>
+        <p>DAISY is a collective of <a href="#researchers-section">researchers</a> at the Department of Computing Science at Umeå University who work on foundations and applications of data management and intelligent systems, covering a diverse range of sub-fields. Our basic research work contributes to the advancement of fundamental research frontiers, in particular to the formal core of computer science and AI; the applied research we conduct has a direct real-world impact, facilitating better decision-making in and about complex information systems.</p>
 
-  .main {
-      padding: 10px 10% 10px 10%;
-  }
-
-  .org-list {
-      visibility: hidden;
-      height: 0;
-  }
-  
-  @media screen and (max-width: 1050px) {
-    .side-row {
-      width: 0%;
-    }
-    .main-row {
-      width: 100%;
-    }
-    .uni-logo-1, .avatar {
-        visibility: hidden;
-        width: 0%;
-        margin-left: 200px;
-    }
-    #banner {
-      height: 30%;
-      font-size: 5em;
-  }
-  }
-
-  @media screen and (max-width: 800px) {
-   #top {
-       visibility: hidden;
-       height: 0px;
-   }
-  }
-
-  @media screen and (max-width: 650px) {
-    #banner {
-      height: 15%;
-      font-size: 2em;
-      color: black;
-      line-height: 100%;
-  }
-    .header-table {
-        visibility: hidden;
-    }
-
-    .org-list {
-        visibility: visible;
-        height: 0%;
-    }
-  }
-
-  @media screen and (max-width: 950px) {
-    .header-table {
-        visibility: hidden;
-    }
-
-    .org-list {
-        visibility: visible;
-        height: fit-content;
-    }
-  }
-
-  @media (orientation: portrait) {
-    .header-table, #top {
-        visibility: hidden;
-        height: 0px;
-        
-    }
-
-    .org-list {
-        visibility: visible;
-        height: fit-content;
-    }
-    #banner {
-      background: url(./cardiff_mobile.jpg) no-repeat;
-      width: 100%;
-      height: 25%;
-      background-size: 100%;
-      font-size: 3em;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      color: black;
-      font-weight: bold;
-  }
-  } 
-  
-  </style>
-  
-  <body>
-<div id="top">
-   <table class="header-table" cellspacing="0" cellpadding="0">
-         <tr>
-            <td>
-                <a href="./index.html">Home</a>
-            </td>
-            <td>
-                <a href="./index.html#topics">Research Topics</a>
-            </td>
-            <td>
-                <a href="./index.html#researchers">Researchers</a>
-            </td>
-            <td>
-                <a href="./index.html#collaboration">Collaboration</a>
-            </td>
-            <td>
-                <a href="./index.html#dates">Contact</a>
-            </td>
-        </tr>
-    </table>
+      </div>
+    </div>
   </div>
-  <div id="banner"><div style="display: table;  margin: 0 auto; color: black; font-size: 0.5em;">Data Management and Intelligent Systems</div></div>
-  <h1>Department of Computing Science, Umeå University</h1 >
 
-    <div class="main">
+
+  <div class="container">
+    <h5 class="my-header">COLLABORATE WITH US</h5>
+    We frequently collaborate with other research institutions, industry, and the public sector and are generally open for collaborations, in particular in the following setups:
+
+    <ul>
+      <li><strong>Student projects and theses</strong>: we are continuously looking for practice partners who are interested in semi-formal collaborations on student projects and theses. Such projects are typically beneficial for practice partners as a way to develop new ideas and reach out to talent with minimal overhead.</li>
+      <li><strong>Joint research projects & PhD student</strong>: to address research and innovation challenges in-depth, we can join as partners in publicly or industrial funded research projects, or supervise individual PhD students.</li>
+      <li><strong>Consulting</strong>: some of us offer their expertise around data management and intelligent systems as consulting services.</li>
+    </ul>
+    <strong>You can contact us by sending an <a href = "mailto: simkus@cs.umu.se">e-mail</a> to the coordinator or by contacting individual researchers via the link in their profile.
+    </strong>
+  </div>
+<!--
+  <div class="container">
+    <h4 class="my-header">CONTACT US</h4>
+    You can contact us by <a href = "mailto: contact@daisy-umea.info">e-mail</a> or by contacting individual researchers by clicking on the link in their profile.
+  </div>
+-->
+
+  <div class="container">
+    <h5 class="my-header">RESEARCH TOPICS</h5>
+
+    <p>Our research topics cover the full data management pipeline, from the foundations of database theory, via inference/querying to visual analytics and decision-making in application scenarios. Key topics of expertise are the following:
+    </p>
     
-        Data Management and Intelligent Systems (DAISy) is a collective of researchers at the Department of Computing Science at Umeå University who work on foundations and applications of data management and intelligent systems, covering a diverse range of sub-fields. Our basic research work contributes to the advancement of fundamental research frontiers, in particular to the formal core of computer science and AI; the applied research we conduct has a direct real-world impact, facilitating better decision-making in and about complex information systems.
+  </div>
 
-<!-- test -->
-<h2 id="topics"></h2> <br>
-<h2> Research Topics</h2>
-Our research topics cover the full data management pipeline, from the foundations of database theory, via inference/querying to visual analytics and decision-making in application scenarios. Key topics of expertise are the following: <br><br>
+  <div class="container">
 
-<table class="header-table" cellspacing="0" cellpadding="0">
-    <tr>
-    <td><strong>Foundations</strong></td>
-    <td><strong>Applications</strong></td>
-    </tr>
-    <tr>
-        <td>Data privacy</td>
-        <td>Automation in agriculture and forestry</td>
-    </tr>
-    <tr>
-        <td>Approximate reasoning (imprecision and uncertainty)</td>
-        <td>Engineering of intelligent systems</td>
-    </tr>
-    <tr>
-        <td>Management of inconsistency and conflicts</td>
-        <td>Business process and business decision management</td>
-    </tr>
-    <tr>
-        <td>Description logics</td>
-        <td>Image analysis across application domains</td>
-    </tr>
-    <tr>
-        <td>Sensory data processing</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Sensory data processing</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Logic programing</td>
-        <td></td>
-    </tr>
-  </table>
+    <div class="six columns">
+      <h5 class="my-header">Foundations</h5>
+<ul>
+  <li><strong>Data Privacy</strong>
+  </li>
+  <li><strong>Approximate Reasoning (imprecision and uncertainty)</strong> </li>
+  <li><strong>Management of inconsistency and conflicts</strong> </li>
+  <li><strong>Ontology-based Data Access</strong> </li>
+  <li><strong>Description Logics</strong> </li>
+  <li><strong>Sensory Data Processing</strong> </li>
+  <li><strong>Logic Programming</strong> </li>
+</ul>
+
+  </div>
+
+    <div class="six columns">
+      <h5 class="my-header">Applications</h5>
+      <ul>
+        <li><strong>(Virtual) Knowledge Graphs</strong> </li>
+        <li><strong>Visualization</strong> </li>
+        <li><strong>Healcare</strong> </li>
+        <li><strong>Automation in agriculture and forestry</strong> </li>
+        <li><strong>Engineering of intelligent systems</strong> </li>
+        <li><strong>Business process and decision management</strong> </li>
+        <li><strong>Image analysis across application domains</strong> </li>
+
+       </ul>
+
+   
+  </div>
+
+  </div>
 
 
-
-  <h2 id="researchers"></h2><br>
-  <h2>Researchers</h2>
-  <div class="org-list">
-  <ul >
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/diego-calvanese/">Diego Calvanese</a>: Full Professor</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/vicenc-torra/">Vicenç Torra</a>: Full Professor</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/artur-lugmayr/">Artur Lugmayr</a>: Associate Professor</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/juan-carlos-nieves/">Juan Carlos Nieves</a>: Associate Professor</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/magdalena-ortiz/">Magdalena Ortiz</a>: Associate Professor</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/ola-ringdahl/">Ola Ringdahl</a>: Associate Professor</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/mantas-simkus/">Mantas Šimkus</a>: Associate Professor</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/timotheus-kampik/">Timotheus Kampik</a>: Adjunct Lecturer</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/staff/arka-ghosh/">Arka Ghosh</a>: PhD Student</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/sargam-gupta/">Sargam Gupta</a>: PhD student </li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/julian-mendez/">Julian Alfredo Mendez</a>: PhD Student</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/mariam-taha/">Mariam Taha</a>: PhD Student</li>
-      <li><a style="font-weight: bolder !important;" href="https://www.umu.se/personal/ayush-kumar-varshney/">Ayush Kumar Varshney</a>: PhD Student</li>
-  </ul>
-</div>
-  <table class="header-table" cellspacing="0" cellpadding="0">
-    <tr>
+  <div class="container">
+    <h5 class="my-header" id="researchers-section">RESEARCHERS</h5>
+    <div class="org-list">
+      <ul >
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/diego-calvanese/">Diego Calvanese</a>: Full Professor</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/vicenc-torra/">Vicenç Torra</a>: Full Professor</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/artur-lugmayr/">Artur Lugmayr</a>: Associate Professor</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/juan-carlos-nieves/">Juan Carlos Nieves</a>: Associate Professor</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/magdalena-ortiz/">Magdalena Ortiz</a>: Associate Professor</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/ola-ringdahl/">Ola Ringdahl</a>: Associate Professor</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/mantas-simkus/">Mantas Šimkus</a>: Associate Professor</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/timotheus-kampik/">Timotheus Kampik</a>: Adjunct Lecturer</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/staff/arka-ghosh/">Arka Ghosh</a>: PhD Student</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/sargam-gupta/">Sargam Gupta</a>: PhD student </li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/julian-mendez/">Julian Alfredo Mendez</a>: PhD Student</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/mariam-taha/">Mariam Taha</a>: PhD Student</li>
+        <li><a style="font-weight: bolder !important;" href="https://www.umu.se/personal/ayush-kumar-varshney/">Ayush Kumar Varshney</a>: PhD Student</li>
+      </ul>
+    </div>
+    <table class="header-table" cellspacing="0" cellpadding="0">
+      <tr>
         <td class="side-row">
-            <img class="avatar" src="./img/diego.webp" alt="Diego - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/diego.webp" alt="Diego - Avatar" height="150" >
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/vicenc.webp" alt="Vicenç - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/vicenc.webp" alt="Vicenç - Avatar" height="150" >
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/artur.webp" alt="Artur - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/artur.webp" alt="Artur - Avatar" height="150" >
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/jcnieves.webp" alt="Juan Carlos - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/jcnieves.webp" alt="Juan Carlos - Avatar" height="150" >
         </td>
-    </tr>
-    <tr>
-    <td><strong><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/diego-calvanese/">Diego Calvanese</a></strong></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/vicenc-torra/">Vicenç Torra</a></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/artur-lugmayr/">Artur Lugmayr</a></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/juan-carlos-nieves/">Juan Carlos Nieves</a></td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
+        <td><strong><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/diego-calvanese/">Diego Calvanese</a></strong></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/vicenc-torra/">Vicenç Torra</a></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/artur-lugmayr/">Artur Lugmayr</a></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/juan-carlos-nieves/">Juan Carlos Nieves</a></td>
+      </tr>
+      <tr>
         <td>Full Professor</td>
         <td>Full Professor</td>
         <td>Associate Professor</td>
         <td>Associate Professor</td>
-        </tr>
-  </table>
-  <table class="header-table" cellspacing="0" cellpadding="0">
-    <tr>
+      </tr>
+    </table>
+    <table class="header-table" cellspacing="0" cellpadding="0">
+      <tr>
         <td class="side-row">
-            <img class="avatar" src="./img/magdalena.png" alt="Magdalena - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/magdalena.png" alt="Magdalena - Avatar" height="150" >
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/ola.webp" alt="Ola - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/ola.webp" alt="Ola - Avatar" height="150" >
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/mantas.png" alt="Mantas - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/mantas.png" alt="Mantas - Avatar" height="150" >
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/tika.jpg" alt="Timotheus - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/tika.jpg" alt="Timotheus - Avatar" height="150" >
         </td>
-    </tr>
-    <br><br>
-    <tr>
-    <td><strong><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/magdalena-ortiz/">Magdalena Ortiz</a></strong></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/ola-ringdahl/">Ola Ringdahl</a></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/mantas-simkus/">Mantas Šimkus</a></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/timotheus-kampik/">Timotheus Kampik</a></td>
-    </tr>
-    <tr>
+      </tr>
+      <br><br>
+      <tr>
+        <td><strong><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/magdalena-ortiz/">Magdalena Ortiz</a></strong></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/ola-ringdahl/">Ola Ringdahl</a></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/mantas-simkus/">Mantas Šimkus</a></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/timotheus-kampik/">Timotheus Kampik</a></td>
+      </tr>
+      <tr>
         <td>Associate Professor</td>
         <td>Associate Professor</td>
         <td>Associate Professor</td>
         <td>Adjunct Lecturer</td>
-        </tr>
-  </table>
-  <table class="header-table" cellspacing="0" cellpadding="0">
-    <tr>
+      </tr>
+    </table>
+    <table class="header-table" cellspacing="0" cellpadding="0">
+      <tr>
         <td class="side-row">
-            <img class="avatar" src="./img/arka.webp" alt="Arka - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/arka.webp" alt="Arka - Avatar" height="150" >
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/sargam.png" alt="Sargam - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/sargam.png" alt="Sargam - Avatar" height="150" >
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/julian.webp" alt="Julian - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/julian.webp" alt="Julian - Avatar" height="150">
         </td>
         <td class="side-row">
-            <img class="avatar" src="./img/mariam.webp" alt="Mariam - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/mariam.webp" alt="Mariam - Avatar" height="150">
         </td>
-    </tr>
-    <br><br>
-    <tr>
-    <td><strong><a style="font-weight: bolder !important;" href="https://www.umu.se/staff/arka-ghosh/">Arka Ghosh</a></strong></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/sargam-gupta/">Sargam Gupta</a></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/julian-mendez/">Julian Alfredo Mendez</a></td>
-    <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/mariam-taha/">Mariam Taha</a></td>
-    </tr>
-    <tr>
+      </tr>
+      <br><br>
+      <tr>
+        <td><strong><a style="font-weight: bolder !important;" href="https://www.umu.se/staff/arka-ghosh/">Arka Ghosh</a></strong></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/sargam-gupta/">Sargam Gupta</a></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/julian-mendez/">Julian Alfredo Mendez</a></td>
+        <td><a style="font-weight: bolder !important;" href="https://www.umu.se/en/staff/mariam-taha/">Mariam Taha</a></td>
+      </tr>
+      <tr>
         <td>PhD Student</td>
         <td>PhD Student</td>
         <td>PhD Student</td>
         <td>PhD Student</td>
-        </tr>
-  </table>
-  <table class="header-table" cellspacing="0" cellpadding="0">
-    <tr>
+      </tr>
+    </table>
+    <table class="header-table" cellspacing="0" cellpadding="0">
+      <tr>
         <td class="side-row">
-            <img class="avatar" src="./img/ayush.png" alt="Ayush - Avatar" height="150" width="145">
+          <img class="avatar" src="./img/ayush.png" alt="Ayush - Avatar" height="150" >
         </td>
-    </tr>
-    <br><br>
-    <tr>
-    <td><strong><a style="font-weight: bolder !important;" href="https://www.umu.se/personal/ayush-kumar-varshney/">Ayush Kumar Varshney</a></strong></td>
-    </tr>
-    <tr>
+      </tr>
+      <br><br>
+      <tr>
+        <td><strong><a style="font-weight: bolder !important;" href="https://www.umu.se/personal/ayush-kumar-varshney/">Ayush Kumar Varshney</a></strong></td>
+      </tr>
+      <tr>
         <td>PhD Student</td>
-        </tr>
-  </table>
-  <br><br>
+      </tr>
+    </table>
 
-  <h2 id="collaboration"></h2> <br>
-  <h2>Collaboration</h2>
-  We frequently collaborate with other research institutions, industry, and the public sector and are generally open for collaborations, in particular in the following setups:
+  </div>
 
-  <ul>
-    <li><strong>Student projects and theses</strong>: we are continuously looking for practice partners who are interested in semi-formal collaborations on student projects and theses. Such projects are typically beneficial for practice partners as a way to develop new ideas and reach out to talent with minimal overhead.</li>
-    <li><strong>Joint research projects & PhD student</strong>: to address research and innovation challenges in-depth, we can join as partners in publicly or industrial funded research projects, or supervise individual PhD students.</li>
-    <li><strong>Consulting</strong>: some of us offer their expertise around data management and intelligent systems as consulting services.</li>
-  </ul>
-
-
-  <h2 id="contact"></h2> <br>
-  <h2> Contact Us</h2>
-  You can contact any particular researcher by clicking on the link in their profile (in the previous section).<br><br><br>
-  
-  <div class="footer">DAISy 2022.<em>Header photo by <a href="https://unsplash.com/@mikofilm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mike Kononov</a> on <a href="https://unsplash.com/s/photos/intelligence?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-    .
-  </em></div>
-</div>
-  </body>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

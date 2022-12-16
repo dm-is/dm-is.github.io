@@ -1,0 +1,172 @@
+.my-header {
+  font-weight: 200;
+  margin-top: 2.5rem;
+  margin-bottom: .7rem; }
+
+
+.org-list {
+  visibility: hidden;
+  height: 0;
+}
+
+.header-table {
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: larger;
+
+}
+
+.side-row {
+  width: 20%;
+}
+.avatar {
+  border-radius: 50%;
+}
+
+
+td a {
+  text-decoration: none !important;
+  font-weight: normal !important;
+  }
+
+
+
+.header-table {
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: larger;
+
+}
+
+.a {
+  text-decoration: underline important!;
+}
+
+td {
+  border: none !important;
+  padding: 2px;
+}
+
+.side-row {
+  width: 20%;
+}
+
+.main-row {
+  width: 60%;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 23px;
+  padding: 10px 10px 10px 10px;
+  background-color: #f8f9f9;
+}
+
+#banner {
+  background: url(./img/header.jpg) no-repeat;
+  width: 100%;
+  height: 45%;
+  background-size: 100%;
+  font-size: 10em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+
+.main {
+  padding: 10px 10% 10px 10%;
+}
+
+.org-list {
+  visibility: hidden;
+  height: 0;
+}
+
+@media screen and (max-width: 1050px) {
+  .side-row {
+    width: 0%;
+  }
+  .main-row {
+    width: 100%;
+  }
+  .uni-logo-1, .avatar {
+    visibility: hidden;
+    width: 0%;
+    margin-left: 200px;
+  }
+  #banner {
+    height: 30%;
+    font-size: 5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #top {
+    visibility: hidden;
+    height: 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #banner {
+    height: 15%;
+    font-size: 2em;
+    color: black;
+    line-height: 100%;
+  }
+  .header-table {
+    visibility: hidden;
+  }
+
+  .org-list {
+    visibility: visible;
+    height: 0%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .header-table {
+    visibility: hidden;
+  }
+
+  .org-list {
+    visibility: visible;
+    height: fit-content;
+  }
+}
+
+@media (orientation: portrait) {
+  .header-table, #top {
+    visibility: hidden;
+    height: 0px;
+
+  }
+
+  .org-list {
+    visibility: visible;
+    height: fit-content;
+  }
+  #banner {
+    background: url(./cardiff_mobile.jpg) no-repeat;
+    width: 100%;
+    height: 25%;
+    background-size: 100%;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+  }
+}
